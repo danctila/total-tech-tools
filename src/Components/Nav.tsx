@@ -1,4 +1,4 @@
-import { Box, Button, HStack, IconButton, Link, Text } from "@chakra-ui/react";
+import { Button, HStack, IconButton, Link, Text } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Modal from "./Modal";
