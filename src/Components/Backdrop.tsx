@@ -21,6 +21,7 @@ const Backdrop = ({ children, onClick }: Props) => {
       alignItems="top"
       py={{ base: "300px", md: "350px" }}
       position="fixed"
+      zIndex={199}
       justifyContent="center"
       onClick={onClick}
       initial={{ opacity: 0 }}
