@@ -6,9 +6,19 @@ import Slideshow from "./Slideshow";
 
 const images = [{ url: test1 }, { url: test2 }, { url: test3 }];
 
-const Work = () => {
+interface Props {
+  reference: any;
+}
+
+const Work = ({ reference }: Props) => {
   return (
-    <Box w="100%" h="1000px" bg="#19181B">
+    <Box
+      w="100%"
+      h="1000px"
+      bg="#19181B"
+      ref={reference}
+      scrollMarginTop="80px"
+    >
       <VStack pt="40px" pb="100px">
         <Text fontSize="50px" color="white">
           Our Work

@@ -11,6 +11,10 @@ import Backdrop from "./Backdrop";
 
 interface Props {
   handleClose: any;
+  servicesClick: () => void;
+  workClick: () => void;
+  aboutClick: () => void;
+  contactClick: () => void;
 }
 
 const dropIn = {
@@ -34,7 +38,30 @@ const dropIn = {
   },
 };
 
-const Modal = ({ handleClose }: Props) => {
+const Modal = ({
+  handleClose,
+  servicesClick,
+  workClick,
+  aboutClick,
+  contactClick,
+}: Props) => {
+  const handleServicesClick = () => {
+    handleClose();
+    servicesClick();
+  };
+  const handleWorkClick = () => {
+    handleClose();
+    workClick();
+  };
+  const handleAboutClick = () => {
+    handleClose();
+    aboutClick();
+  };
+  const handleContactClick = () => {
+    handleClose();
+    contactClick();
+  };
+
   const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) =>
       isValidMotionProp(prop) || shouldForwardProp(prop),
@@ -61,13 +88,13 @@ const Modal = ({ handleClose }: Props) => {
             letterSpacing="2px"
           >
             <Center mb="50px">
-              <Link>SERVICES</Link>
+              <Link onClick={handleServicesClick}>SERVICES</Link>
             </Center>
             <Center mb="50px">
-              <Link>WORK</Link>
+              <Link onClick={handleWorkClick}>WORK</Link>
             </Center>
             <Center mb="50px">
-              <Link>ABOUT</Link>
+              <Link onClick={handleAboutClick}>ABOUT</Link>
             </Center>
             <Center mb="50px">
               <Button
@@ -76,6 +103,7 @@ const Modal = ({ handleClose }: Props) => {
                 fontSize="26"
                 fontWeight="none"
                 _hover={{ bg: "#8C52FF" }}
+                onClick={handleContactClick}
               >
                 CONTACT
               </Button>

@@ -1,8 +1,18 @@
 import { Button, Divider, Text, VStack } from "@chakra-ui/react";
 
-const About = () => {
+interface Props {
+  reference: any;
+}
+
+const About = ({ reference }: Props) => {
   return (
-    <VStack bg="#19181B" w="100%" h="800px">
+    <VStack
+      bg="#19181B"
+      w="100%"
+      h="800px"
+      ref={reference}
+      scrollMarginTop="80px"
+    >
       <VStack pb="30px" pt="40px">
         <Text fontSize="50px" color="white" letterSpacing="1px">
           About Us

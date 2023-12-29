@@ -1,9 +1,19 @@
 import { VStack, Divider, Text, Box, Button } from "@chakra-ui/react";
 
-const Connect = () => {
+interface Props {
+  reference: any;
+}
+
+const Connect = ({ reference }: Props) => {
   return (
     <>
-      <Box w="100%" h="400px" bg="#3E3B45">
+      <Box
+        w="100%"
+        h="400px"
+        bg="#3E3B45"
+        ref={reference}
+        scrollMarginTop="80px"
+      >
         <VStack pt="40px">
           <Text fontSize="50px" color="white">
             Let's Connect

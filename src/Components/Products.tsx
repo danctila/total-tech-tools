@@ -12,7 +12,11 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-const Products = () => {
+interface Props {
+  reference: any;
+}
+
+const Products = ({ reference }: Props) => {
   return (
     <>
       <Box
@@ -20,6 +24,8 @@ const Products = () => {
         h={{ base: "1200px", lg: "850px" }}
         bg="#3E3B45"
         letterSpacing="1px"
+        ref={reference}
+        scrollMarginTop="80px"
       >
         {/* Desktop style */}
         <VStack

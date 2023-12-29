@@ -3,7 +3,15 @@ import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Modal from "./Modal";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-const Nav = () => {
+
+interface Props {
+  servicesClick: () => void;
+  workClick: () => void;
+  aboutClick: () => void;
+  contactClick: () => void;
+}
+
+const Nav = ({ servicesClick, workClick, aboutClick, contactClick }: Props) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const close = () => setModalOpen(false);
@@ -48,15 +56,16 @@ const Nav = () => {
           spacing="50px"
           letterSpacing="2px"
         >
-          <Link>SERVICES</Link>
-          <Link>WORK</Link>
-          <Link>ABOUT</Link>
+          <Link onClick={servicesClick}>SERVICES</Link>
+          <Link onClick={workClick}>WORK</Link>
+          <Link onClick={aboutClick}>ABOUT</Link>
           <Button
             bg="#8C52FF"
             color="white"
             fontSize="26"
             fontWeight="none"
             _hover={{ bg: "#8C52FF" }}
+            onClick={contactClick}
           >
             CONTACT
           </Button>
@@ -73,7 +82,15 @@ const Nav = () => {
         />
       </HStack>
       <AnimatePresence initial={false} mode={"wait"}>
-        {modalOpen && <Modal handleClose={close} />}
+        {modalOpen && (
+          <Modal
+            handleClose={close}
+            servicesClick={servicesClick}
+            workClick={workClick}
+            aboutClick={aboutClick}
+            contactClick={contactClick}
+          />
+        )}
       </AnimatePresence>
     </>
   );
