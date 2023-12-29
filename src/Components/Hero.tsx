@@ -1,6 +1,7 @@
-import { Box, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Center, Image, Text, VStack } from "@chakra-ui/react";
 import Logo from "../assets/Logo_Two-_transparent_ (1).webp";
 import Tilt from "react-parallax-tilt";
+import ReactTypingEffect from "react-typing-effect";
 
 const Hero = () => {
   return (
@@ -30,7 +31,15 @@ const Hero = () => {
           </Text>
         </VStack>
       </Box>
-      <Box h="80px" w="100%" bg="#19181B"></Box>
+      <Center h="80px" w="100%" bg="#19181B" color="white" fontSize="50px">
+        <ReactTypingEffect
+          text={["Web solutions", "Modern development"]}
+          speed={150}
+          eraseSpeed={150}
+          typingDelay={1000}
+          eraseDelay={1000}
+        />
+      </Center>
       <Box h="3000px" w="100%" bg="purple"></Box>
     </>
   );
