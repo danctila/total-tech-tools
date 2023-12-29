@@ -1,5 +1,5 @@
 import { Box, Center, Image, Text, VStack } from "@chakra-ui/react";
-import Logo from "../assets/Logo_Two-_transparent_ (1).webp";
+import Logo from "../assets/Logo_new_text_transparent.png";
 import Tilt from "react-parallax-tilt";
 import ReactTypingEffect from "react-typing-effect";
 
@@ -16,7 +16,7 @@ const Hero = () => {
         display="flex"
       >
         <VStack spacing="30px" letterSpacing="2px">
-          <Tilt perspective={500} scale={1.02} trackOnWindow={true}>
+          <Tilt perspective={300} scale={1.02} trackOnWindow={true}>
             <Image
               src={Logo}
               boxSize={{ base: "220px", sm: "230", md: "280", lg: "300" }}
@@ -46,7 +46,6 @@ const Hero = () => {
           eraseDelay={1000}
         />
       </Center>
-      <Box h="3000px" w="100%" bg="purple"></Box>
     </>
   );
 };

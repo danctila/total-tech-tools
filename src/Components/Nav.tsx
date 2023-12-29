@@ -1,4 +1,4 @@
-import { Button, HStack, IconButton, Link, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, IconButton, Link, Text } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Modal from "./Modal";
@@ -19,14 +19,27 @@ const Nav = () => {
         justifyContent="space-between"
         px="15px"
       >
-        <Text
-          color="white"
-          fontSize={{ base: "18", sm: "30" }}
-          fontWeight="bold"
-          letterSpacing="4px"
-        >
-          TOTAL TECH TOOLS
-        </Text>
+        <HStack fontWeight="bold" letterSpacing="4px" spacing="0">
+          <Text color="#9b69f1" fontSize={{ base: "18", sm: "30" }}>
+            T
+          </Text>
+          <Text color="white" fontSize={{ base: "18", sm: "30" }}>
+            OTAL{" "}
+          </Text>
+          <Text color="#9b69f1" fontSize={{ base: "18", sm: "30" }}>
+            T
+          </Text>
+          <Text color="white" fontSize={{ base: "18", sm: "30" }}>
+            ECH{" "}
+          </Text>
+          <Text color="#8C52FF" fontSize={{ base: "18", sm: "30" }}>
+            T
+          </Text>
+          <Text color="white" fontSize={{ base: "18", sm: "30" }}>
+            OOLS
+          </Text>
+        </HStack>
+
         <HStack
           display={{ base: "none", lg: "flex" }}
           fontSize="26"
