@@ -11,7 +11,7 @@ const Work = () => {
     <Box w="100%" h="1000px" bg="#19181B">
       <VStack pt="100px" pb="100px">
         <Text fontSize="50px" color="white">
-          OUR WORK
+          Our Work
         </Text>
         <Divider
           orientation="horizontal"
