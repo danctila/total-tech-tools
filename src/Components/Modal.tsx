@@ -75,6 +75,7 @@ const Modal = ({ handleClose }: Props) => {
                 color="white"
                 fontSize="26"
                 fontWeight="none"
+                _hover={{ bg: "#8C52FF" }}
               >
                 CONTACT
               </Button>

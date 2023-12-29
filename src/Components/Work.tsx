@@ -9,7 +9,7 @@ const images = [{ url: test1 }, { url: test2 }, { url: test3 }];
 const Work = () => {
   return (
     <Box w="100%" h="1000px" bg="#19181B">
-      <VStack pt="100px" pb="100px">
+      <VStack pt="40px" pb="100px">
         <Text fontSize="50px" color="white">
           Our Work
         </Text>

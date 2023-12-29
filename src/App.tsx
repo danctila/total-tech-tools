@@ -1,4 +1,6 @@
 import About from "./Components/About";
+import Connect from "./Components/Connect";
+import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Nav from "./Components/Nav";
 import Products from "./Components/Products";
@@ -11,7 +13,9 @@ function App() {
       <Hero />
       <Products />
       <Work />
+      <Connect />
       <About />
+      <Footer />
     </>
   );
 }

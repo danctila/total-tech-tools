@@ -51,7 +51,13 @@ const Nav = () => {
           <Link>SERVICES</Link>
           <Link>WORK</Link>
           <Link>ABOUT</Link>
-          <Button bg="#8C52FF" color="white" fontSize="26" fontWeight="none">
+          <Button
+            bg="#8C52FF"
+            color="white"
+            fontSize="26"
+            fontWeight="none"
+            _hover={{ bg: "#8C52FF" }}
+          >
             CONTACT
           </Button>
         </HStack>

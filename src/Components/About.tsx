@@ -3,7 +3,7 @@ import { Button, Divider, Text, VStack } from "@chakra-ui/react";
 const About = () => {
   return (
     <VStack bg="#19181B" w="100%" h="800px">
-      <VStack pb="30px">
+      <VStack pb="30px" pt="40px">
         <Text fontSize="50px" color="white" letterSpacing="1px">
           About Us
         </Text>
@@ -41,7 +41,7 @@ const About = () => {
           fontWeight="none"
           _hover={{ bg: "#8C52FF" }}
           color="white"
-          w="100px"
+          w="120px"
           bg="#19181B"
           mt="10px"
         >
