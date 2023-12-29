@@ -1,15 +1,13 @@
-import {
-  Button,
-  HStack,
-  IconButton,
-  Link,
-  Text,
-  VStack,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Button, HStack, IconButton, Link, Text } from "@chakra-ui/react";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import Modal from "./Modal";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 const Nav = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
   return (
     <>
       <HStack
@@ -38,26 +36,20 @@ const Nav = () => {
             CONTACT
           </Button>
         </HStack>
+
         <IconButton
           size={"lg"}
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          icon={modalOpen ? <CloseIcon /> : <HamburgerIcon />}
           aria-label={"Open Menu"}
           display={{ lg: "none" }}
-          onClick={isOpen ? onClose : onOpen}
+          onClick={() => (modalOpen ? close() : open())}
           color="white"
           bg="19181B"
         />
-        {isOpen ? (
-          <VStack display={{ lg: "none" }}>
-            <Link>SERVICES</Link>
-            <Link>WORK</Link>
-            <Link>ABOUT</Link>
-            <Button bg="#8C52FF" color="white" fontSize="26" fontWeight="none">
-              CONTACT
-            </Button>
-          </VStack>
-        ) : null}
       </HStack>
+      <AnimatePresence initial={false} mode={"wait"}>
+        {modalOpen && <Modal handleClose={close} />}
+      </AnimatePresence>
     </>
   );
 };
