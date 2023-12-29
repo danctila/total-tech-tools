@@ -31,7 +31,13 @@ const Hero = () => {
           </Text>
         </VStack>
       </Box>
-      <Center h="80px" w="100%" bg="#19181B" color="white" fontSize="50px">
+      <Center
+        h="80px"
+        w="100%"
+        bg="#19181B"
+        color="white"
+        fontSize={{ base: "30px", sm: "40px", md: "50px" }}
+      >
         <ReactTypingEffect
           text={["Web solutions", "Modern development"]}
           speed={150}
