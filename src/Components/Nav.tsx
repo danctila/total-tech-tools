@@ -19,7 +19,12 @@ const Nav = () => {
         justifyContent="space-between"
         px="15px"
       >
-        <Text color="white" fontSize="30" fontWeight="bold" letterSpacing="4px">
+        <Text
+          color="white"
+          fontSize={{ base: "18", sm: "30" }}
+          fontWeight="bold"
+          letterSpacing="4px"
+        >
           TOTAL TECH TOOLS
         </Text>
         <HStack
