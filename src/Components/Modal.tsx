@@ -58,6 +58,7 @@ const Modal = ({ handleClose }: Props) => {
             fontSize="26"
             fontWeight="none"
             color="white"
+            letterSpacing="2px"
           >
             <Center mb="50px">
               <Link>SERVICES</Link>

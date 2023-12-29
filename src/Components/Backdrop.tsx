@@ -14,14 +14,12 @@ const Backdrop = ({ children, onClick }: Props) => {
   return (
     <ChakraBox
       pos="absolute"
-      top={0}
-      left={0}
       h="100%"
       w="100%"
       bg="#000000e1"
       display="flex"
       alignItems="top"
-      py="250px"
+      py={{ base: "300px", md: "350px" }}
       position="fixed"
       justifyContent="center"
       onClick={onClick}

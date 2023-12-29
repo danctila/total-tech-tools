@@ -1,5 +1,6 @@
 import { Box, Image, Text, VStack } from "@chakra-ui/react";
 import Logo from "../assets/Logo_Two-_transparent_ (1).webp";
+import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
   return (
@@ -14,10 +15,12 @@ const Hero = () => {
         display="flex"
       >
         <VStack spacing="30px" letterSpacing="2px">
-          <Image
-            src={Logo}
-            boxSize={{ base: "220px", sm: "230", md: "280", lg: "300" }}
-          ></Image>
+          <Tilt perspective={500} scale={1.02} trackOnWindow={true}>
+            <Image
+              src={Logo}
+              boxSize={{ base: "220px", sm: "230", md: "280", lg: "300" }}
+            ></Image>
+          </Tilt>
           <Text
             fontSize={{ base: "25", md: "28", sm: "32" }}
             color="white"
@@ -27,6 +30,7 @@ const Hero = () => {
           </Text>
         </VStack>
       </Box>
+      <Box h="80px" w="100%" bg="#19181B"></Box>
       <Box h="3000px" w="100%" bg="purple"></Box>
     </>
   );
