@@ -33,6 +33,7 @@ const Nav = () => {
           fontWeight="none"
           color="white"
           spacing="50px"
+          letterSpacing="2px"
         >
           <Link>SERVICES</Link>
           <Link>WORK</Link>
