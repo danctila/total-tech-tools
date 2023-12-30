@@ -8,7 +8,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { SetStateAction, useState } from "react";
-
 const DataForm = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -165,6 +164,7 @@ const DataForm = () => {
           <FormLabel>Message</FormLabel>
           <Input
             borderRadius="1px"
+            h="80px"
             value={message}
             onChange={handleMessageChange}
             type="text"
