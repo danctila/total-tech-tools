@@ -1,5 +1,6 @@
 import About from "./Components/About";
 import Connect from "./Components/Connect";
+import DataForm from "./Components/DataForm";
 import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Nav from "./Components/Nav";
@@ -39,6 +40,7 @@ function App() {
       <Work reference={work} />
       <Connect reference={contact} />
       <About reference={about} />
+      <DataForm />
       <Footer />
     </>
   );

@@ -64,7 +64,7 @@ const Nav = ({ servicesClick, workClick, aboutClick, contactClick }: Props) => {
             color="white"
             fontSize="26"
             fontWeight="none"
-            _hover={{ bg: "#8C52FF" }}
+            _hover={{ bg: "#8C52FF", transform: "scale(1.1)" }}
             onClick={contactClick}
           >
             CONTACT
