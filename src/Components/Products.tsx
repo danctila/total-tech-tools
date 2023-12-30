@@ -21,7 +21,7 @@ const Products = ({ reference }: Props) => {
     <>
       <Box
         w="100%"
-        h={{ base: "1200px", lg: "850px" }}
+        h={{ base: "1600px", sm: "1400px", md: "1300px", lg: "950px" }}
         bg="#3E3B45"
         letterSpacing="1px"
         ref={reference}
@@ -30,7 +30,7 @@ const Products = ({ reference }: Props) => {
         {/* Desktop style */}
         <VStack
           spacing="50px"
-          pt={{ base: "100px", lg: "200px" }}
+          pt={{ base: "100px", lg: "150px" }}
           display={{ base: "none", md: "none", lg: "flex" }}
         >
           <HStack>
@@ -55,7 +55,7 @@ const Products = ({ reference }: Props) => {
                   Personally curated, business grade applications.
                 </Text>
               </Box>
-              <Box w="430px" ml="50px">
+              <Box w="430px" ml="25px">
                 <Text fontSize="22px" color="#D8D6DC">
                   Helping businesses grow with simple, elegant, modern
                   technologies.
@@ -76,15 +76,19 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
                     letterSpacing="1px"
+                    fontWeight="bold"
                   >
-                    Design Mockups
+                    Design Mock-ups
                   </Box>
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Instead of just telling you what your website has to look
+                  like, we make it your choice. Every detail of how your new
+                  website will look and feel can be clearly ironed out with
+                  beautiful, elegant designs of your choice.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -95,7 +99,8 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
                     Website Development
@@ -103,7 +108,9 @@ const Products = ({ reference }: Props) => {
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Need the full package? Mock-ups, development, hosting and
+                  management can all be done to give you all the power necessary
+                  to take a stand in the digital world.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -114,15 +121,20 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
-                    Hosting
+                    Managed Domains & Hosting
                   </Box>
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  The best website is one that works consistently. Our managed
+                  hosting does exactly that, keeping your website fast,
+                  reliable, and secure. With top-notch maintenance and support
+                  we also allow domain names to be your choice. Want
+                  mybusiness.com? Done.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -133,45 +145,8 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
-                    letterSpacing="1px"
-                  >
-                    Tooling additions
-                  </Box>
-                </AccordionButton>
-
-                <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem borderColor="#3E3B45">
-                <AccordionButton>
-                  <AccordionIcon />
-                  <Box
-                    as="span"
-                    flex="1"
-                    textAlign="left"
-                    fontSize="22px"
-                    letterSpacing="1px"
-                  >
-                    Domain management
-                  </Box>
-                </AccordionButton>
-
-                <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem borderColor="#3E3B45">
-                <AccordionButton>
-                  <AccordionIcon />
-                  <Box
-                    as="span"
-                    flex="1"
-                    textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
                     Redesign
@@ -179,7 +154,79 @@ const Products = ({ reference }: Props) => {
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Is your website simple to navigate, attractive, and effective
+                  at converting leads? This is why we use the latest technology
+                  to create websites that pulls visitors in and engage them with
+                  your business.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Tooling Additions
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  Have a full website but feel something is missing? We have a
+                  toolbox full of modern practices to help you bring on the
+                  upgrades and keep your website optimal.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Mobile Responsive Development
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  Even if you are a B2B business or feel that you don’t need a
+                  presence in the mobile world, your audience is almost
+                  guaranteed to view your website on a mobile device. Our
+                  responsive web development gives you that edge over slower
+                  competitors.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Support & Maintenance
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  When you contact us, we respond! We make it our priority to
+                  work with and understand your needs. Our business is unique in
+                  its personal communications, getting what you need finished
+                  the right way.
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
@@ -197,7 +244,7 @@ const Products = ({ reference }: Props) => {
         {/* Medium to large */}
         <VStack
           spacing="50px"
-          pt="200px"
+          pt="150px"
           display={{ base: "none", md: "flex", lg: "none" }}
         >
           <HStack>
@@ -222,7 +269,7 @@ const Products = ({ reference }: Props) => {
                   Personally curated, business grade applications.
                 </Text>
               </Box>
-              <Box w="430px" ml="50px">
+              <Box w="430px" ml="25px">
                 <Text fontSize="22px" color="#D8D6DC">
                   Helping businesses grow with simple, elegant, modern
                   technologies.
@@ -251,15 +298,19 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
                     letterSpacing="1px"
+                    fontWeight="bold"
                   >
-                    Design Mockups
+                    Design Mock-ups
                   </Box>
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Instead of just telling you what your website has to look
+                  like, we make it your choice. Every detail of how your new
+                  website will look and feel can be clearly ironed out with
+                  beautiful, elegant designs of your choice.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -270,7 +321,8 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
                     Website Development
@@ -278,7 +330,9 @@ const Products = ({ reference }: Props) => {
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Need the full package? Mock-ups, development, hosting and
+                  management can all be done to give you all the power necessary
+                  to take a stand in the digital world.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -289,15 +343,20 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
-                    Hosting
+                    Managed Domains & Hosting
                   </Box>
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  The best website is one that works consistently. Our managed
+                  hosting does exactly that, keeping your website fast,
+                  reliable, and secure. With top-notch maintenance and support
+                  we also allow domain names to be your choice. Want
+                  mybusiness.com? Done.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -308,45 +367,8 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
-                    letterSpacing="1px"
-                  >
-                    Tooling additions
-                  </Box>
-                </AccordionButton>
-
-                <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem borderColor="#3E3B45">
-                <AccordionButton>
-                  <AccordionIcon />
-                  <Box
-                    as="span"
-                    flex="1"
-                    textAlign="left"
-                    fontSize="22px"
-                    letterSpacing="1px"
-                  >
-                    Domain management
-                  </Box>
-                </AccordionButton>
-
-                <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem borderColor="#3E3B45">
-                <AccordionButton>
-                  <AccordionIcon />
-                  <Box
-                    as="span"
-                    flex="1"
-                    textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
                     Redesign
@@ -354,7 +376,79 @@ const Products = ({ reference }: Props) => {
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Is your website simple to navigate, attractive, and effective
+                  at converting leads? This is why we use the latest technology
+                  to create websites that pulls visitors in and engage them with
+                  your business.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Tooling Additions
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  Have a full website but feel something is missing? We have a
+                  toolbox full of modern practices to help you bring on the
+                  upgrades and keep your website optimal.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Mobile Responsive Development
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  Even if you are a B2B business or feel that you don’t need a
+                  presence in the mobile world, your audience is almost
+                  guaranteed to view your website on a mobile device. Our
+                  responsive web development gives you that edge over slower
+                  competitors.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Support & Maintenance
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  When you contact us, we respond! We make it our priority to
+                  work with and understand your needs. Our business is unique in
+                  its personal communications, getting what you need finished
+                  the right way.
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
@@ -376,7 +470,7 @@ const Products = ({ reference }: Props) => {
           pt="200px"
           display={{ base: "flex", md: "none", lg: "none" }}
         >
-          <HStack w="310px">
+          <HStack>
             <Divider
               orientation="vertical"
               borderColor="#8C52FF"
@@ -398,7 +492,7 @@ const Products = ({ reference }: Props) => {
                   Personally curated, business grade applications.
                 </Text>
               </Box>
-              <Box ml="50px">
+              <Box ml="25px">
                 <Text fontSize="14px" color="#D8D6DC">
                   Helping businesses grow with simple, elegant, modern
                   technologies.
@@ -427,15 +521,19 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
                     letterSpacing="1px"
+                    fontWeight="bold"
                   >
-                    Design Mockups
+                    Design Mock-ups
                   </Box>
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Instead of just telling you what your website has to look
+                  like, we make it your choice. Every detail of how your new
+                  website will look and feel can be clearly ironed out with
+                  beautiful, elegant designs of your choice.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -446,7 +544,8 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
                     Website Development
@@ -454,7 +553,9 @@ const Products = ({ reference }: Props) => {
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Need the full package? Mock-ups, development, hosting and
+                  management can all be done to give you all the power necessary
+                  to take a stand in the digital world.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -465,15 +566,20 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
-                    Hosting
+                    Managed Domains & Hosting
                   </Box>
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  The best website is one that works consistently. Our managed
+                  hosting does exactly that, keeping your website fast,
+                  reliable, and secure. With top-notch maintenance and support
+                  we also allow domain names to be your choice. Want
+                  mybusiness.com? Done.
                 </AccordionPanel>
               </AccordionItem>
 
@@ -484,45 +590,8 @@ const Products = ({ reference }: Props) => {
                     as="span"
                     flex="1"
                     textAlign="left"
-                    fontSize="22px"
-                    letterSpacing="1px"
-                  >
-                    Tooling additions
-                  </Box>
-                </AccordionButton>
-
-                <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem borderColor="#3E3B45">
-                <AccordionButton>
-                  <AccordionIcon />
-                  <Box
-                    as="span"
-                    flex="1"
-                    textAlign="left"
-                    fontSize="22px"
-                    letterSpacing="1px"
-                  >
-                    Domain management
-                  </Box>
-                </AccordionButton>
-
-                <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem borderColor="#3E3B45">
-                <AccordionButton>
-                  <AccordionIcon />
-                  <Box
-                    as="span"
-                    flex="1"
-                    textAlign="left"
-                    fontSize="22px"
+                    fontSize="26px"
+                    fontWeight="bold"
                     letterSpacing="1px"
                   >
                     Redesign
@@ -530,7 +599,79 @@ const Products = ({ reference }: Props) => {
                 </AccordionButton>
 
                 <AccordionPanel pb={4} fontSize="18px">
-                  Lorem ipsum
+                  Is your website simple to navigate, attractive, and effective
+                  at converting leads? This is why we use the latest technology
+                  to create websites that pulls visitors in and engage them with
+                  your business.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Tooling Additions
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  Have a full website but feel something is missing? We have a
+                  toolbox full of modern practices to help you bring on the
+                  upgrades and keep your website optimal.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Mobile Responsive Development
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  Even if you are a B2B business or feel that you don’t need a
+                  presence in the mobile world, your audience is almost
+                  guaranteed to view your website on a mobile device. Our
+                  responsive web development gives you that edge over slower
+                  competitors.
+                </AccordionPanel>
+              </AccordionItem>
+
+              <AccordionItem borderColor="#3E3B45">
+                <AccordionButton>
+                  <AccordionIcon />
+                  <Box
+                    as="span"
+                    flex="1"
+                    textAlign="left"
+                    fontSize="26px"
+                    fontWeight="bold"
+                    letterSpacing="1px"
+                  >
+                    Support & Maintenance
+                  </Box>
+                </AccordionButton>
+
+                <AccordionPanel pb={4} fontSize="18px">
+                  When you contact us, we respond! We make it our priority to
+                  work with and understand your needs. Our business is unique in
+                  its personal communications, getting what you need finished
+                  the right way.
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
