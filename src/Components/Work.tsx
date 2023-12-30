@@ -1,10 +1,28 @@
-import { Button, Divider, HStack, Text, VStack } from "@chakra-ui/react";
-import test1 from "../assets/tests/Logo_new_bigText.png";
-import test2 from "../assets/tests/Logo_new_text.png";
-import test3 from "../assets/tests/Logo_new_text_transparent.png";
+import { Divider, HStack, Text, VStack } from "@chakra-ui/react";
+import landscape1 from "../assets/landscape/landscape_1.webp";
+import landscape2 from "../assets/landscape/landscape_2.webp";
+import landscape3 from "../assets/landscape/landscape_3.webp";
+import landscape4 from "../assets/landscape/landscape_4.webp";
+import barber1 from "../assets/barber/barber1.webp";
+import barber2 from "../assets/barber/barber2.webp";
+import barber3 from "../assets/barber/barber3.webp";
+import barber4 from "../assets/barber/barber4.webp";
+
 import Slideshow from "./Slideshow";
 
-const images = [{ url: test1 }, { url: test2 }, { url: test3 }];
+const landscapeImages = [
+  { url: landscape1 },
+  { url: landscape2 },
+  { url: landscape3 },
+  { url: landscape4 },
+];
+
+const barberImages = [
+  { url: barber1 },
+  { url: barber2 },
+  { url: barber3 },
+  { url: barber4 },
+];
 
 interface Props {
   reference: any;
@@ -14,7 +32,7 @@ const Work = ({ reference }: Props) => {
   return (
     <VStack
       w="100%"
-      h="1000px"
+      h={{ base: "900px", sm: "1050px", md: "1300px", lg: "1500px" }}
       bg="#19181B"
       ref={reference}
       scrollMarginTop="80px"
@@ -31,15 +49,26 @@ const Work = ({ reference }: Props) => {
         />
       </VStack>
 
-      <Slideshow images={images} />
+      <Slideshow images={landscapeImages} />
+      <HStack
+        justifyContent="space-between"
+        w={{ base: "320px", sm: "480px", md: "700px", lg: "900px" }}
+        mb="100px"
+      >
+        <Text color="white" fontWeight="bold" fontSize={{ base: "24px" }}>
+          The Landscaper
+        </Text>
+      </HStack>
+
+      <Slideshow images={barberImages} />
       <HStack
         justifyContent="space-between"
         w={{ base: "320px", sm: "480px", md: "700px", lg: "900px" }}
       >
         <Text color="white" fontWeight="bold" fontSize={{ base: "24px" }}>
-          Business One
+          The Barbershop
         </Text>
-        <Button
+        {/* <Button
           borderRadius="8px"
           border="1px"
           borderColor="#D8D6DC"
@@ -51,7 +80,7 @@ const Work = ({ reference }: Props) => {
           mt="10px"
         >
           LIVE DEMO
-        </Button>
+        </Button> */}
       </HStack>
     </VStack>
   );
