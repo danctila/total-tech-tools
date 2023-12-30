@@ -2,9 +2,10 @@ import { VStack, Divider, Text, Box, Button } from "@chakra-ui/react";
 
 interface Props {
   reference: any;
+  contactClick: () => void;
 }
 
-const Connect = ({ reference }: Props) => {
+const Connect = ({ reference, contactClick }: Props) => {
   return (
     <>
       <Box
@@ -38,6 +39,7 @@ const Connect = ({ reference }: Props) => {
             w="150px"
             bg="#19181B"
             mt="10px"
+            onClick={contactClick}
           >
             INQUIRE ONLINE
           </Button>

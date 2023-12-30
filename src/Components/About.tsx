@@ -2,9 +2,10 @@ import { Button, Divider, Text, VStack } from "@chakra-ui/react";
 
 interface Props {
   reference: any;
+  contactClick: () => void;
 }
 
-const About = ({ reference }: Props) => {
+const About = ({ reference, contactClick }: Props) => {
   return (
     <VStack
       bg="#19181B"
@@ -54,6 +55,7 @@ const About = ({ reference }: Props) => {
           w="120px"
           bg="#19181B"
           mt="10px"
+          onClick={contactClick}
         >
           REACH OUT
         </Button>

@@ -14,6 +14,7 @@ function App() {
   const work = useRef<null | HTMLDivElement>(null);
   const about = useRef<null | HTMLDivElement>(null);
   const contact = useRef<null | HTMLDivElement>(null);
+  const talk = useRef<null | HTMLDivElement>(null);
 
   const scrollToServices = () => {
     services.current?.scrollIntoView({ behavior: "smooth" });
@@ -27,6 +28,9 @@ function App() {
   const scrollToContact = () => {
     contact.current?.scrollIntoView({ behavior: "smooth" });
   };
+  const scrollToTalk = () => {
+    talk.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <>
@@ -39,9 +43,9 @@ function App() {
       <Hero />
       <Products reference={services} workClick={scrollToWork} />
       <Work reference={work} />
-      <Connect reference={contact} />
-      <About reference={about} />
-      <ScrollTxt />
+      <Connect reference={contact} contactClick={scrollToTalk} />
+      <About reference={about} contactClick={scrollToTalk} />
+      <ScrollTxt reference={talk} />
       <DataForm />
       <Footer />
     </>

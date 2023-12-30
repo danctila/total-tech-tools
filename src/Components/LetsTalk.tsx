@@ -1,9 +1,13 @@
 import { Divider, Text, VStack } from "@chakra-ui/react";
 
-const LetsTalk = () => {
+interface Props {
+  reference: any;
+}
+
+const LetsTalk = ({ reference }: Props) => {
   return (
     <>
-      <VStack bg="#3E3B45">
+      <VStack bg="#3E3B45" ref={reference}>
         <Text fontSize="48px" color="white">
           Let's Talk.
         </Text>
