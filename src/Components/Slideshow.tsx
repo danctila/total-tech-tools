@@ -7,7 +7,7 @@ interface Props {
 const Slideshow = ({ images }: Props) => {
   return (
     <>
-      {/* small */}
+      {/* base */}
       <VStack display={{ base: "flex", sm: "none", md: "none", lg: "none" }}>
         <SimpleImageSlider
           images={images}
@@ -19,7 +19,7 @@ const Slideshow = ({ images }: Props) => {
         />
       </VStack>
 
-      {/* med */}
+      {/* sm */}
       <VStack display={{ base: "none", sm: "flex", md: "none", lg: "none" }}>
         <SimpleImageSlider
           images={images}
@@ -30,7 +30,7 @@ const Slideshow = ({ images }: Props) => {
           navMargin={0}
         />
       </VStack>
-      {/* lg */}
+      {/* md */}
       <VStack display={{ base: "none", sm: "none", md: "flex", lg: "none" }}>
         <SimpleImageSlider
           images={images}
@@ -42,7 +42,7 @@ const Slideshow = ({ images }: Props) => {
         />
       </VStack>
 
-      {/* >lg */}
+      {/* lg */}
       <VStack display={{ base: "none", sm: "none", md: "none", lg: "flex" }}>
         <SimpleImageSlider
           images={images}
