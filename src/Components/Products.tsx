@@ -14,9 +14,10 @@ import {
 
 interface Props {
   reference: any;
+  workClick: () => void;
 }
 
-const Products = ({ reference }: Props) => {
+const Products = ({ reference, workClick }: Props) => {
   return (
     <>
       <Box
@@ -238,7 +239,20 @@ const Products = ({ reference }: Props) => {
               h="400px"
             />
           </HStack>
-          <Button>VIEW PROJECTS</Button>
+          <Button
+            borderRadius="8px"
+            border="1px"
+            borderColor="#D8D6DC"
+            fontWeight="none"
+            _hover={{ bg: "#8C52FF" }}
+            color="white"
+            w="170px"
+            bg="#19181B"
+            mt="10px"
+            onClick={workClick}
+          >
+            VIEW PROJECTS
+          </Button>
         </VStack>
 
         {/* Medium to large */}
@@ -461,7 +475,20 @@ const Products = ({ reference }: Props) => {
             />
           </HStack>
 
-          <Button>VIEW PROJECTS</Button>
+          <Button
+            borderRadius="8px"
+            border="1px"
+            borderColor="#D8D6DC"
+            fontWeight="none"
+            _hover={{ bg: "#8C52FF" }}
+            color="white"
+            w="170px"
+            bg="#19181B"
+            mt="10px"
+            onClick={workClick}
+          >
+            VIEW PROJECTS
+          </Button>
         </VStack>
 
         {/* Medium and lower */}
@@ -684,7 +711,20 @@ const Products = ({ reference }: Props) => {
             />
           </HStack>
 
-          <Button>VIEW PROJECTS</Button>
+          <Button
+            borderRadius="8px"
+            border="1px"
+            borderColor="#D8D6DC"
+            fontWeight="none"
+            _hover={{ bg: "#8C52FF" }}
+            color="white"
+            w="170px"
+            bg="#19181B"
+            mt="10px"
+            onClick={workClick}
+          >
+            VIEW PROJECTS
+          </Button>
         </VStack>
       </Box>
     </>

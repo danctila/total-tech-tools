@@ -35,7 +35,7 @@ function App() {
         contactClick={scrollToContact}
       />
       <Hero />
-      <Products reference={services} />
+      <Products reference={services} workClick={scrollToWork} />
       <Work reference={work} />
       <Connect reference={contact} />
       <About reference={about} />
