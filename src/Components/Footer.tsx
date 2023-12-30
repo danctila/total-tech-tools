@@ -41,7 +41,15 @@ const Footer = () => {
           </Text>
         </HStack>
 
-        <Link color="#D8D6DC" fontWeight="none" fontSize="18px" ml="-125px">
+        <Link
+          color="#D8D6DC"
+          fontWeight="none"
+          fontSize="18px"
+          ml="-125px"
+          onClick={() =>
+            (window.location.href = "mailto:totaltechtool@gmail.com")
+          }
+        >
           totaltechtool@gmail.com
         </Link>
       </HStack>
@@ -77,7 +85,14 @@ const Footer = () => {
           </Text>
         </HStack>
 
-        <Link color="#D8D6DC" fontWeight="none" fontSize="18px">
+        <Link
+          color="#D8D6DC"
+          fontWeight="none"
+          fontSize="18px"
+          onClick={() =>
+            (window.location.href = "mailto:totaltechtool@gmail.com")
+          }
+        >
           totaltechtool@gmail.com
         </Link>
       </VStack>
