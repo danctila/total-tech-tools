@@ -9,7 +9,7 @@ const LetsTalk = ({ reference }: Props) => {
     <>
       <VStack bg="#3E3B45" ref={reference}>
         <Text fontSize="48px" color="white">
-          Let's Talk.
+          Let's Talk
         </Text>
         <Divider
           orientation="horizontal"
