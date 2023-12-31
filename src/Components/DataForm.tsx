@@ -5,11 +5,14 @@ import {
   FormLabel,
   HStack,
   Input,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 import { SetStateAction, useState } from "react";
 import emailjs from "@emailjs/browser";
 const DataForm = () => {
+  const [sent, setSent] = useState(false);
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [businessName, setBusinessName] = useState("");
@@ -116,13 +119,17 @@ const DataForm = () => {
         templateParams,
         "HMQ9E4oLVbDaVSlhX"
       );
+      setSent(true);
+    } else {
+      setSent(false);
     }
   };
   return (
     <Box
       bg="#3E3B45"
-      h="400px"
+      h="450px"
       w="100%"
+      pt="20px"
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -204,7 +211,7 @@ const DataForm = () => {
         <Button
           type="submit"
           mt="20px"
-          bg="#8C52FF"
+          bg={sent ? "#52ff52" : "#8C52FF"}
           color="white"
           fontSize="22px"
           fontWeight="none"
@@ -214,6 +221,11 @@ const DataForm = () => {
         >
           SEND
         </Button>
+        {sent && (
+          <Text fontSize="20px" color="#52ff52">
+            Success! Thank you, we will be in touch shortly.
+          </Text>
+        )}
       </FormControl>
     </Box>
   );
