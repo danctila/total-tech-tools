@@ -8,6 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { SetStateAction, useState } from "react";
+import emailjs from "@emailjs/browser";
 const DataForm = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -65,11 +66,13 @@ const DataForm = () => {
       setNameError(false);
     }
     if (businessName.length === 0) {
+      setFormError(true);
       setBusinessNameError(true);
     } else {
       setBusinessNameError(false);
     }
     if (phone.length === 0) {
+      setFormError(true);
       setPhoneError(true);
     } else {
       setPhoneError(false);
@@ -81,13 +84,38 @@ const DataForm = () => {
       setMessageError(false);
     }
     if (
-      emailError &&
+      !emailError &&
       !nameError &&
       !businessNameError &&
       !phoneError &&
       !messageError
     ) {
       setFormError(false);
+
+      const templateParams = {
+        message:
+          "Name: " +
+          name +
+          " " +
+          "Business Name: " +
+          businessName +
+          " " +
+          "Email: " +
+          email +
+          " " +
+          "Phone: " +
+          phone +
+          " " +
+          "Message: " +
+          message,
+      };
+
+      emailjs.send(
+        "service_wfqqkcd",
+        "template_jtdwga5",
+        templateParams,
+        "HMQ9E4oLVbDaVSlhX"
+      );
     }
   };
   return (
