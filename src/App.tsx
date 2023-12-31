@@ -5,7 +5,7 @@ import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Nav from "./Components/Nav";
 import Products from "./Components/Products";
-import ScrollTxt from "./Components/LetsTalk";
+import LetsTalk from "./Components/LetsTalk";
 import Work from "./Components/Work";
 import { useRef } from "react";
 
@@ -45,7 +45,7 @@ function App() {
       <Work reference={work} />
       <Connect reference={contact} contactClick={scrollToTalk} />
       <About reference={about} contactClick={scrollToTalk} />
-      <ScrollTxt reference={talk} />
+      <LetsTalk reference={talk} />
       <DataForm />
       <Footer />
     </>
