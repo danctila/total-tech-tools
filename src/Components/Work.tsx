@@ -19,6 +19,10 @@ import grader1 from "../assets/grader/grader1.webp";
 import grader2 from "../assets/grader/grader2.webp";
 import grader3 from "../assets/grader/grader3.webp";
 import grader4 from "../assets/grader/grader4.webp";
+import maywood1 from "../assets/maywood/maywood_1.webp";
+import maywood2 from "../assets/maywood/maywood_2.webp";
+import maywood3 from "../assets/maywood/maywood_3.webp";
+import maywood4 from "../assets/maywood/maywood_4.webp";
 import landscape1 from "../assets/landscape/landscape_1.webp";
 import landscape2 from "../assets/landscape/landscape_2.webp";
 import landscape3 from "../assets/landscape/landscape_3.webp";
@@ -36,6 +40,13 @@ const graderImages = [
   { url: grader2 },
   { url: grader3 },
   { url: grader4 },
+];
+
+const maywoodImages = [
+  { url: maywood1 },
+  { url: maywood2 },
+  { url: maywood3 },
+  { url: maywood4 },
 ];
 
 const landscapeImages = [
@@ -96,7 +107,29 @@ const Work = ({ reference }: Props) => {
       </ModalBody>
     </>
   );
+
   const ModalTwo = () => (
+    <>
+      <ModalHeader fontSize="24px">Maywood Restaurant & Bar</ModalHeader>
+      <ModalCloseButton _hover={{ bg: "white" }} />
+      <ModalBody>
+        <Text fontSize="20px" letterSpacing="1px">
+          This restaurant site features an elegant, modern design that attracts
+          customers towards its menu and booking form. The eye catching images
+          and functional components give power to the website to convert
+          visitors to customers.
+        </Text>
+        <VStack>
+          <Image src={maywood1} />
+          <Image src={maywood2} />
+          <Image src={maywood3} />
+          <Image src={maywood4} />
+        </VStack>
+      </ModalBody>
+    </>
+  );
+
+  const ModalThree = () => (
     <>
       <ModalHeader fontSize="24px">The Landscaper</ModalHeader>
       <ModalCloseButton _hover={{ bg: "white" }} />
@@ -116,7 +149,7 @@ const Work = ({ reference }: Props) => {
     </>
   );
 
-  const ModalThree = () => (
+  const ModalFour = () => (
     <>
       <ModalHeader fontSize="24px">The Barbershop</ModalHeader>
       <ModalCloseButton _hover={{ bg: "white" }} />
@@ -142,7 +175,7 @@ const Work = ({ reference }: Props) => {
   return (
     <VStack
       w="100%"
-      h={{ base: "1370px", sm: "1650px", md: "2000px", lg: "2300px" }}
+      h={{ base: "1600px", sm: "2100px", md: "2600px", lg: "3000px" }}
       bg="#19181B"
       ref={reference}
       scrollMarginTop="80px"
@@ -211,6 +244,58 @@ const Work = ({ reference }: Props) => {
         </Modal>
       </HStack>
 
+      <Slideshow images={maywoodImages} />
+      <HStack
+        justifyContent="space-between"
+        w={{ base: "320px", sm: "480px", md: "700px", lg: "900px" }}
+        mb="100px"
+      >
+        <Text color="white" fontWeight="bold" fontSize={{ base: "24px" }}>
+          Maywood Restaurant & Bar
+        </Text>
+        <Button
+          borderRadius="8px"
+          border="1px"
+          borderColor="#D8D6DC"
+          fontWeight="none"
+          _hover={{ bg: "#8C52FF" }}
+          color="white"
+          w={{ base: "120px", sm: "170px" }}
+          bg="#19181B"
+          mt="10px"
+          onClick={() => {
+            setModalBody(<ModalTwo />);
+            onOpen();
+          }}
+        >
+          SEE MORE
+        </Button>
+        <Modal
+          onClose={onClose}
+          isOpen={isOpen}
+          motionPreset="scale"
+          scrollBehavior={"inside"}
+          size="xl"
+          isCentered
+        >
+          <ModalOverlay />
+          <ModalContent>
+            {modalBody}
+            <ModalFooter>
+              <Button
+                onClick={onClose}
+                _hover={{ bg: "#8C52FF" }}
+                bg="white"
+                border="1px"
+                borderColor="#19181B"
+              >
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </HStack>
+
       <Slideshow images={landscapeImages} />
       <HStack
         justifyContent="space-between"
@@ -231,7 +316,7 @@ const Work = ({ reference }: Props) => {
           bg="#19181B"
           mt="10px"
           onClick={() => {
-            setModalBody(<ModalTwo />);
+            setModalBody(<ModalThree />);
             onOpen();
           }}
         >
@@ -258,7 +343,7 @@ const Work = ({ reference }: Props) => {
           bg="#19181B"
           mt="10px"
           onClick={() => {
-            setModalBody(<ModalThree />);
+            setModalBody(<ModalFour />);
             onOpen();
           }}
         >
