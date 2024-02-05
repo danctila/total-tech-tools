@@ -23,11 +23,11 @@ const Hero = () => {
             ></Image>
           </Tilt>
           <Text
-            fontSize={{ base: "25", md: "28", sm: "32" }}
+            fontSize={{ base: "23", md: "24", sm: "29" }}
             color="white"
             align="center"
           >
-            CRAFTING WEBSITES THAT EMPOWER BUSINESSES
+            The agency for businesses who want to win in the digital age
           </Text>
         </VStack>
       </Box>

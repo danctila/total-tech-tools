@@ -88,13 +88,13 @@ const Modal = ({
             letterSpacing="2px"
           >
             <Center mb="50px">
-              <Link onClick={handleServicesClick}>SERVICES</Link>
+              <Link onClick={handleServicesClick}>Services</Link>
             </Center>
             <Center mb="50px">
-              <Link onClick={handleWorkClick}>WORK</Link>
+              <Link onClick={handleWorkClick}>Work</Link>
             </Center>
             <Center mb="50px">
-              <Link onClick={handleAboutClick}>ABOUT</Link>
+              <Link onClick={handleAboutClick}>About</Link>
             </Center>
             <Center mb="50px">
               <Button
@@ -105,7 +105,7 @@ const Modal = ({
                 _hover={{ bg: "#8C52FF", transform: "scale(1.1)" }}
                 onClick={handleContactClick}
               >
-                CONTACT
+                Contact
               </Button>
             </Center>
           </VStack>

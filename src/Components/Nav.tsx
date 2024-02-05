@@ -56,9 +56,9 @@ const Nav = ({ servicesClick, workClick, aboutClick, contactClick }: Props) => {
           spacing="50px"
           letterSpacing="2px"
         >
-          <Link onClick={servicesClick}>SERVICES</Link>
-          <Link onClick={workClick}>WORK</Link>
-          <Link onClick={aboutClick}>ABOUT</Link>
+          <Link onClick={servicesClick}>Services</Link>
+          <Link onClick={workClick}>Work</Link>
+          <Link onClick={aboutClick}>About</Link>
           <Button
             bg="#8C52FF"
             color="white"
@@ -67,7 +67,7 @@ const Nav = ({ servicesClick, workClick, aboutClick, contactClick }: Props) => {
             _hover={{ bg: "#8C52FF", transform: "scale(1.1)" }}
             onClick={contactClick}
           >
-            CONTACT
+            Contact
           </Button>
         </HStack>
 
