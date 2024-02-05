@@ -14,8 +14,10 @@ const Slideshow = ({ images }: Props) => {
           width={320}
           height={180}
           showNavs={true}
-          showBullets={true}
+          showBullets={false}
           navMargin={0}
+          autoPlay={true}
+          autoPlayDelay={4}
         />
       </VStack>
 
@@ -26,8 +28,10 @@ const Slideshow = ({ images }: Props) => {
           width={480}
           height={270}
           showNavs={true}
-          showBullets={true}
+          showBullets={false}
           navMargin={0}
+          autoPlay={true}
+          autoPlayDelay={4}
         />
       </VStack>
       {/* md */}
@@ -37,8 +41,10 @@ const Slideshow = ({ images }: Props) => {
           width={700}
           height={394}
           showNavs={true}
-          showBullets={true}
+          showBullets={false}
           navMargin={0}
+          autoPlay={true}
+          autoPlayDelay={4}
         />
       </VStack>
 
@@ -49,8 +55,11 @@ const Slideshow = ({ images }: Props) => {
           width={900}
           height={506}
           showNavs={true}
-          showBullets={true}
+          showBullets={false}
           navMargin={0}
+          autoPlay={true}
+          autoPlayDelay={4}
+          style={{ background: "black", color: "black" }}
         />
       </VStack>
     </>
