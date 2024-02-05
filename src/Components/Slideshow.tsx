@@ -59,7 +59,6 @@ const Slideshow = ({ images }: Props) => {
           navMargin={0}
           autoPlay={true}
           autoPlayDelay={4}
-          style={{ background: "black", color: "black" }}
         />
       </VStack>
     </>
